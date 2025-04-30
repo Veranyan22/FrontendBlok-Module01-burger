@@ -1,6 +1,203 @@
-body {
-    font-family: "Open Sans", sans-serif;
+@font-face{
+    font-family: 'Lato';
+    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato/latoregular.woff2) format('woff2'), url(../fonts/lato/latoregular.woff2) format(woff), url(../fonts/lato/latoregular.woff2) format('truetype');
+    font-weight: 400;
+    font-style:normal;
+}
 
+
+
+
+:root{
+   --font-lato: "Lato", sans-serif;
+   --font-nunito: "Nunito Sans", sans-serif;
+
+
+   --gradient: linear-gradient(90deg, #ff323f 0%, #ff37e4 100%);
+   --light:#fff;
+   --light-gray:#E9E9E9;
+}
+
+
+
+
+body {
+    font-family: var(--font-lato);
+  font-size: 16px;
     /*font-family: "Nunito Sans", sans-serif;*/
 
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+margin:0 auto;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    background-color: var(--light);
+    border-radius: 16px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.main{
+    color: var(--light);
+    background-image: url(../image/bg-main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+.logo{
+    display: block;
+    width: 105px;
+    height: 30px;
+    background-image: url(../image/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.nav{
+    display: flex;
+    gap: 40px;
+    font-size: 14px;
+    color: #333;
+}
+.btn-accent{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 18px 20px;
+    box-sizing: border-box;
+    width: fit-content;
+
+    font-weight: 900;
+    font-family: var(--font-nunito);
+    background: var(--gradient);
+    border-radius: 10px;
+    color: var(--light);
+}
+
+
+.btn-accent::before{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url(../image/btn-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: fit-content;
+}
+
+
+.badge{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--light);
+    border-radius: 8px;
+   width: fit-content;
+   font-size:12px;
+    font-family: var(--font-nunito);
+}
+.badge2{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+    gap: 6px;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--light);
+    border-radius: 8px;
+   width: fit-content;
+   font-size:12px;
+    font-family: var(--font-nunito);
+}
+.title-h1{
+    font-family: var(--font-nunito);
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.title-h2{
+    font-family: var(--font-nunito);
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+.description{
+    line-height: 1.6;
+    color: var(--light-gray);
+}
+.description2{
+   
+    line-height: 1.6;
+    color: var(--light-gray);
+    text-align: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.text-small{
+    font-family: var(--font-nunito);
+color: var(--light-gray);
+    font-size: 12px;
+    margin: 0;
+}
+.badge::before{
+   
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url(../image/icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.badge2::before{
+   
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url(../image/icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* Hero */
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description-hero{
+    max-width: 556px;
+}
+.brands{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap:30px 55px;
+}
+.brands .text-small{
+    flex-basis: 100%;
 }
